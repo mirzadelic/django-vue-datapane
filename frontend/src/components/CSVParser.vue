@@ -2,15 +2,17 @@
   <div>
     <v-form @submit.prevent="addOrUpdate($v)">
       <v-row>
-        <v-col cols="12" md="4">
-            <v-file-input label="File input" v-model="file" accept=".csv" @change="dataLoaded = false"></v-file-input>
+        <v-col cols="12">
+          <v-file-input
+            label="File input"
+            v-model="file"
+            accept=".csv"
+            @change="dataLoaded = false"></v-file-input>
         </v-col>
-      </v-row>
-      <v-row>
-        <v-col cols="12" md="4">
+        <v-col cols="12">
           <v-btn color="primary" v-on:click="uploadFile()" dark>
-              Upload and process
-            </v-btn>
+            Upload and process
+          </v-btn>
         </v-col>
       </v-row>
     </v-form>
